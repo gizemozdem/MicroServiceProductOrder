@@ -1,0 +1,18 @@
+version: '3.4'
+
+services:
+  microserviceproduct:
+    image: microserviceproduct
+    build:
+      context: .
+      dockerfile: MicroServiceProduct/Dockerfile
+    ports:
+      - "5001:80"
+
+  microserviceorder:
+    image: microserviceorder
+    build:
+      context: .
+      dockerfile: MicroServiceOrder/Dockerfile
+    ports:
+      - "5002:80"
